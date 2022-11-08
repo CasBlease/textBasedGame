@@ -1,6 +1,5 @@
 var Player = {
   //items
-  hasSPan: false,
   hasOven: false,
   hasFPan: false,
   hasKnife: false,
