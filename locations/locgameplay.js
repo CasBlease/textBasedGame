@@ -3,12 +3,18 @@ function encounterSlime(){ //dunno how to pass an object thru the params
   var img = document.createElement('img');
   img.src = 'https://cdnb.artstation.com/p/assets/images/images/049/156/725/original/woodrush-soda-slimey.gif?1651811702';
   document.getElementById('encounter').appendChild(img);
+  
+  var conText = document.createTextNode("The slime is " 
+    + convinced + " convinced out of 100.");
+  document.getElementById('encounter').appendChild(conText);
+  
   if(convinced >= 0){
     let btnA = document.createElement("button");
     btnA.innerHTML = "Pet";
     btnA.addEventListener("click", 
     function () {
       alert("The slime blurbled happily");
+      convinced += 50;
     });
     document.getElementById("encounter").appendChild(btnA);
 
@@ -36,10 +42,7 @@ function encounterSlime(){ //dunno how to pass an object thru the params
     });
     document.getElementById("encounter").appendChild(btnD);
     }
-}
-
-function encounterGameplay(){
-  
+    console.log(convinced + " convinced");
 }
 
 var Slime = {
@@ -60,6 +63,6 @@ var Slime = {
     winCon: "",
     loseCon: "",
 
-    item: water
+    //item: water
 };
 
